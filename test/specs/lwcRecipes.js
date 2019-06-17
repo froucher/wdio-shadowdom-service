@@ -15,7 +15,7 @@ describe('LWC recipes with Webdriver.io v4 and async', function() {
       .catch(e => { console.log(e); throw e; } );
   });
   it('should Calculate Monthly Payment', function() {
-    return browser.url('https://recipes.lwc.dev/#misc')
+    return browser.url('https://recipes.lwc.dev')
       .setViewportSize({
         width: 1200,
         height: 600,
@@ -36,7 +36,7 @@ describe('LWC recipes with Webdriver.io v4 and async', function() {
       .catch(e => { console.log(e); throw e; } );
   });
   it('should Checkbox works', function() {
-    return browser.url('https://recipes.lwc.dev/#misc')
+    return browser.url('https://recipes.lwc.dev')
       .setViewportSize({
         width: 1200,
         height: 600,

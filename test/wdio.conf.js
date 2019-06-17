@@ -1,6 +1,7 @@
-const ShadowDom = require('../index.js');
+const shadowDom = require('../index.js');
 
-exports.config = {
+let config = {
+
   path: '/',
 
   //
@@ -13,12 +14,11 @@ exports.config = {
   // directory is where your package.json resides, so `wdio` will be called from there.
   //
   specs: [
-    './specs/**/*.js'
+    './specs/*.js'
   ],
 
   // Patterns to exclude.
   exclude: [
-
     // 'path/to/excluded/files'
   ],
 
@@ -86,7 +86,7 @@ exports.config = {
   // with `/`, the base url gets prepended, not including the path portion of your baseUrl.
   // If your `url` parameter starts without a scheme or `/` (like `some/path`), the base url
   // gets prepended directly.
-  baseUrl: 'http://webdriver.io',
+  baseUrl: 'https://recipes.lwc.dev',
 
   //
   // Default timeout for all waitFor* commands.
@@ -100,6 +100,11 @@ exports.config = {
   //
   // Default request retries count
   connectionRetryCount: 3,
+
+  //Shadow DOM
+  shadowDom: {
+    overwrite: true
+  },
 
   //
   // Initialize the browser instance with a WebdriverIO plugin. The object should have the
@@ -124,7 +129,12 @@ exports.config = {
   // Services take over a specific job you don't want to take care of. They enhance
   // your test setup with almost no effort. Unlike plugins, they don't add new
   // commands. Instead, they hook themselves up into the test process.
-  services: ['chromedriver', ShadowDom],
+
+  // SAUCELABS config
+
+  /*
+  services: ['chromedriver', shadowDom],
+  */
 
   //
   // Framework you want to run your specs with.
@@ -262,3 +272,14 @@ exports.config = {
   // onComplete: function(exitCode, config, capabilities) {
   // }
 };
+
+if (process.env.SAUCELABS_USER) {
+  config.user = process.env.SAUCELABS_USER;
+  config.key = process.env.SAUCELABS_KEY;
+  config.services = ['sauce', shadowDom];
+  config.sauceConnect = true;
+} else {
+  config.services = ['chromedriver', shadowDom];
+}
+
+exports.config = config;
