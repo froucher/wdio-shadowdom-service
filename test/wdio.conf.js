@@ -1,7 +1,6 @@
 const ShadowDom = require('../index.js');
 
 exports.config = {
-  port: '9515',
   path: '/',
 
   //

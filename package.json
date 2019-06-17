@@ -4,7 +4,7 @@
   "description": "Webdriver.io Service for Shadow Dom support",
   "main": "index.js",
   "scripts": {
-    "test": "cd test && ../node_modules/.bin/wdio"
+    "test": "cd test && ../node_modules/webdriverio/bin/wdio"
   },
   "repository": {
     "type": "git",
