@@ -1,7 +1,6 @@
 const shadowDom = require('../index.js');
 
 let config = {
-
   path: '/',
 
   //
@@ -276,8 +275,8 @@ let config = {
 if (process.env.SAUCELABS_USER) {
   config.user = process.env.SAUCELABS_USER;
   config.key = process.env.SAUCELABS_KEY;
+  config.sauceConnect = false;
   config.services = ['sauce', shadowDom];
-  config.sauceConnect = true;
 } else {
   config.services = ['chromedriver', shadowDom];
 }
