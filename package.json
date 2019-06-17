@@ -1,0 +1,32 @@
+{
+  "name": "shadowdom-service",
+  "version": "0.1.0",
+  "description": "Webdriver.io Service for Shadow Dom support",
+  "main": "index.js",
+  "scripts": {
+    "test": "cd test && ../node_modules/.bin/wdio"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@globaldevtools.bbva.com:7999/sffrw/shadowdom-service.git"
+  },
+  "keywords": [
+    "webdriver",
+    "wdio",
+    "wdio-service",
+    "shadow-dom"
+  ],
+  "author": "Felipe Roucher <felipe.roucher@gmail.com>",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "@wdio/logger": "^5.9.3"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "chromedriver": "^75.0.0",
+    "wdio-chromedriver-service": "^5.0.2",
+    "wdio-mocha-framework": "^0.6.4",
+    "wdio-spec-reporter": "^0.1.5",
+    "webdriverio": "^4.0.0"
+  }
+}
