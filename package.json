@@ -1,33 +1,31 @@
 {
-  "name": "shadowdom-service",
+  "name": "wdio-shadowdom-service",
   "version": "0.1.0",
-  "description": "Webdriver.io Service for Shadow Dom support",
+  "description": "Webdriver IO service to support Shadow DOM with Web Components Application",
   "main": "index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "dependencies": {},
+  "devDependencies": {},
   "scripts": {
-    "test": "cd test && ../node_modules/webdriverio/bin/wdio"
+    "test": "mocha"
   },
   "repository": {
     "type": "git",
-    "url": "ssh://git@globaldevtools.bbva.com:7999/sffrw/shadowdom-service.git"
+    "url": "git+https://github.com/froucher/wdio-shadowdom-service.git"
   },
   "keywords": [
-    "webdriver",
     "wdio",
     "wdio-service",
-    "shadow-dom"
+    "shadow-dom",
+    "web-components"
   ],
   "author": "Felipe Roucher <felipe.roucher@gmail.com>",
   "license": "Apache-2.0",
-  "dependencies": {
-    "@wdio/logger": "^5.9.3"
+  "bugs": {
+    "url": "https://github.com/froucher/wdio-shadowdom-service/issues"
   },
-  "devDependencies": {
-    "chai": "^4.2.0",
-    "chromedriver": "^75.0.0",
-    "wdio-chromedriver-service": "^5.0.2",
-    "wdio-mocha-framework": "^0.6.4",
-    "wdio-sauce-service": "^0.4.14",
-    "wdio-spec-reporter": "^0.1.5",
-    "webdriverio": "^4.14.2"
-  }
+  "homepage": "https://github.com/froucher/wdio-shadowdom-service#readme"
 }

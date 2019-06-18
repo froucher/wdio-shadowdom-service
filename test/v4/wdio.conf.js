@@ -1,4 +1,4 @@
-const shadowDom = require('../index.js');
+const shadowDom = require('../../index.js');
 
 let config = {
   path: '/',
@@ -129,11 +129,6 @@ let config = {
   // your test setup with almost no effort. Unlike plugins, they don't add new
   // commands. Instead, they hook themselves up into the test process.
 
-  // SAUCELABS config
-
-  /*
-  services: ['chromedriver', shadowDom],
-  */
 
   //
   // Framework you want to run your specs with.
@@ -276,7 +271,7 @@ if (process.env.SAUCELABS_USER) {
   config.user = process.env.SAUCELABS_USER;
   config.key = process.env.SAUCELABS_KEY;
   config.sauceConnect = false;
-  config.services = ['sauce', shadowDom];
+  config.services = [ 'sauce', shadowDom ];
 } else {
   config.services = ['chromedriver', shadowDom];
 }
